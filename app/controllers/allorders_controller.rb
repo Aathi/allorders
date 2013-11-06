@@ -64,11 +64,13 @@ class AllordersController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_allorder
-      @allorder = Allorder.find(params[:ORDER_ID])
+      @allorder = Allorder.find(params[:rowid])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def allorder_params
-      params.require(:allorder).permit(:CREATED_DATE, :PERFORMER, :CATEGORY, :DURATION, :QUALITY, :DELIVERY_TIME, :ORDER_STATE, :UPLOAD_VIDEO, :Performer_TOTAL, :C4U_commission, :Gross_Total)
+      params.require(:allorder).permit(:CREATED_DATE, :PERFORMER, 
+                     :CATEGORY, :DURATION, :QUALITY, :DELIVERY_TIME, 
+                     :ORDER_STATE, :UPLOAD_VIDEO, :Performer_TOTAL, :C4U_commission, :Gross_Total)
     end
 end

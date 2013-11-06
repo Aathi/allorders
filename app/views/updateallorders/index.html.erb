@@ -1,0 +1,47 @@
+<h1>Listing updateallorders</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Created date</th>
+      <th>Performer</th>
+      <th>Category</th>
+      <th>Duration</th>
+      <th>Quality</th>
+      <th>Delivery time</th>
+      <th>Order state</th>
+      <th>Upload video</th>
+      <th>Performer total</th>
+      <th>C4u commission</th>
+      <th>Gross total</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @updateallorders.each do |updateallorder| %>
+      <tr>
+        <td><%= updateallorder.CREATED_DATE %></td>
+        <td><%= updateallorder.PERFORMER %></td>
+        <td><%= updateallorder.CATEGORY %></td>
+        <td><%= updateallorder.DURATION %></td>
+        <td><%= updateallorder.QUALITY %></td>
+        <td><%= updateallorder.DELIVERY_TIME %></td>
+        <td><%= updateallorder.ORDER_STATE %></td>
+        <td><%= updateallorder.UPLOAD_VIDEO %></td>
+        <td><%= updateallorder.Performer_TOTAL %></td>
+        <td><%= updateallorder.C4U_commission %></td>
+        <td><%= updateallorder.Gross_Total %></td>
+        <td><%= link_to 'Show', updateallorder %></td>
+        <td><%= link_to 'Edit', edit_updateallorder_path(updateallorder) %></td>
+        <td><%= link_to 'Destroy', updateallorder, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Updateallorder', new_updateallorder_path %>

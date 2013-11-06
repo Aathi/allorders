@@ -1,4 +1,6 @@
 Newallorders::Application.routes.draw do
+  resources :updateallorders
+
   resources :signups
 
   resources :allorders

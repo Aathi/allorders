@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131106170053) do
+ActiveRecord::Schema.define(version: 20131106182837) do
 
   create_table "allorders", id: false, force: true do |t|
     t.string   "CREATED_DATE"
@@ -30,12 +30,26 @@ ActiveRecord::Schema.define(version: 20131106170053) do
     t.integer  "ORDER_ID"
   end
 
-  create_table "signups", force: true do |t|
-    t.string   "first_Name"
-    t.string   "last_name"
+  create_table "signups", primary_key: "user_id", force: true do |t|
+    t.string   "name"
     t.string   "email_id"
-    t.string   "username"
     t.string   "password"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "updateallorders", primary_key: "ORDER_ID", force: true do |t|
+    t.string   "CREATED_DATE"
+    t.string   "PERFORMER"
+    t.string   "CATEGORY"
+    t.string   "DURATION"
+    t.string   "QUALITY"
+    t.string   "DELIVERY_TIME"
+    t.string   "ORDER_STATE"
+    t.string   "UPLOAD_VIDEO"
+    t.string   "Performer_TOTAL"
+    t.string   "C4U_commission"
+    t.string   "Gross_Total"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -18,7 +18,7 @@ class SignupsControllerTest < ActionController::TestCase
 
   test "should create signup" do
     assert_difference('Signup.count') do
-      post :create, signup: { email_id: @signup.email_id, first_Name: @signup.first_Name, last_name: @signup.last_name, password: @signup.password, username: @signup.username }
+      post :create, signup: { email_id: @signup.email_id, name: @signup.name, password: @signup.password }
     end
 
     assert_redirected_to signup_path(assigns(:signup))
@@ -35,7 +35,7 @@ class SignupsControllerTest < ActionController::TestCase
   end
 
   test "should update signup" do
-    patch :update, id: @signup, signup: { email_id: @signup.email_id, first_Name: @signup.first_Name, last_name: @signup.last_name, password: @signup.password, username: @signup.username }
+    patch :update, id: @signup, signup: { email_id: @signup.email_id, name: @signup.name, password: @signup.password }
     assert_redirected_to signup_path(assigns(:signup))
   end
 

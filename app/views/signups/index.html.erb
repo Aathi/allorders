@@ -3,10 +3,8 @@
 <table>
   <thead>
     <tr>
-      <th>First name</th>
-      <th>Last name</th>
+      <th>Name</th>
       <th>Email</th>
-      <th>Username</th>
       <th>Password</th>
       <th></th>
       <th></th>
@@ -17,10 +15,8 @@
   <tbody>
     <% @signups.each do |signup| %>
       <tr>
-        <td><%= signup.first_Name %></td>
-        <td><%= signup.last_name %></td>
+        <td><%= signup.name %></td>
         <td><%= signup.email_id %></td>
-        <td><%= signup.username %></td>
         <td><%= signup.password %></td>
         <td><%= link_to 'Show', signup %></td>
         <td><%= link_to 'Edit', edit_signup_path(signup) %></td>

@@ -1,0 +1,61 @@
+<%= form_for(@updateallorder) do |f| %>
+  <% if @updateallorder.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@updateallorder.errors.count, "error") %> prohibited this updateallorder from being saved:</h2>
+
+      <ul>
+      <% @updateallorder.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :CREATED_DATE %><br>
+    <%= f.text_field :CREATED_DATE %>
+  </div>
+  <div class="field">
+    <%= f.label :PERFORMER %><br>
+    <%= f.text_field :PERFORMER %>
+  </div>
+  <div class="field">
+    <%= f.label :CATEGORY %><br>
+    <%= f.text_field :CATEGORY %>
+  </div>
+  <div class="field">
+    <%= f.label :DURATION %><br>
+    <%= f.text_field :DURATION %>
+  </div>
+  <div class="field">
+    <%= f.label :QUALITY %><br>
+    <%= f.text_field :QUALITY %>
+  </div>
+  <div class="field">
+    <%= f.label :DELIVERY_TIME %><br>
+    <%= f.text_field :DELIVERY_TIME %>
+  </div>
+  <div class="field">
+    <%= f.label :ORDER_STATE %><br>
+    <%= f.text_field :ORDER_STATE %>
+  </div>
+  <div class="field">
+    <%= f.label :UPLOAD_VIDEO %><br>
+    <%= f.text_field :UPLOAD_VIDEO %>
+  </div>
+  <div class="field">
+    <%= f.label :Performer_TOTAL %><br>
+    <%= f.text_field :Performer_TOTAL %>
+  </div>
+  <div class="field">
+    <%= f.label :C4U_commission %><br>
+    <%= f.text_field :C4U_commission %>
+  </div>
+  <div class="field">
+    <%= f.label :Gross_Total %><br>
+    <%= f.text_field :Gross_Total %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

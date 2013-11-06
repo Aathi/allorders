@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  CREATED_DATE: MyString
+  PERFORMER: MyString
+  CATEGORY: MyString
+  DURATION: MyString
+  QUALITY: MyString
+  DELIVERY_TIME: MyString
+  ORDER_STATE: MyString
+  UPLOAD_VIDEO: MyString
+  Performer_TOTAL: MyString
+  C4U_commission: MyString
+  Gross_Total: MyString
+
+two:
+  CREATED_DATE: MyString
+  PERFORMER: MyString
+  CATEGORY: MyString
+  DURATION: MyString
+  QUALITY: MyString
+  DELIVERY_TIME: MyString
+  ORDER_STATE: MyString
+  UPLOAD_VIDEO: MyString
+  Performer_TOTAL: MyString
+  C4U_commission: MyString
+  Gross_Total: MyString
