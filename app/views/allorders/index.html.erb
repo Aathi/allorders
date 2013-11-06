@@ -1,0 +1,47 @@
+<h1>Listing allorders</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Created date</th>
+      <th>Performer</th>
+      <th>Category</th>
+      <th>Duration</th>
+      <th>Quality</th>
+      <th>Delivery time</th>
+      <th>Order state</th>
+      <th>Upload video</th>
+      <th>Performer total</th>
+      <th>C4u commission</th>
+      <th>Gross total</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @allorders.each do |allorder| %>
+      <tr>
+        <td><%= allorder.CREATED_DATE %></td>
+        <td><%= allorder.PERFORMER %></td>
+        <td><%= allorder.CATEGORY %></td>
+        <td><%= allorder.DURATION %></td>
+        <td><%= allorder.QUALITY %></td>
+        <td><%= allorder.DELIVERY_TIME %></td>
+        <td><%= allorder.ORDER_STATE %></td>
+        <td><%= allorder.UPLOAD_VIDEO %></td>
+        <td><%= allorder.Performer_TOTAL %></td>
+        <td><%= allorder.C4U_commission %></td>
+        <td><%= allorder.Gross_Total %></td>
+        <td><%= link_to 'Show', allorder %></td>
+        <td><%= link_to 'Edit', edit_allorder_path(allorder) %></td>
+        <td><%= link_to 'Destroy', allorder, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Allorder', new_allorder_path %>

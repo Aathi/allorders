@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Created date:</strong>
+  <%= @allorder.CREATED_DATE %>
+</p>
+
+<p>
+  <strong>Performer:</strong>
+  <%= @allorder.PERFORMER %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @allorder.CATEGORY %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @allorder.DURATION %>
+</p>
+
+<p>
+  <strong>Quality:</strong>
+  <%= @allorder.QUALITY %>
+</p>
+
+<p>
+  <strong>Delivery time:</strong>
+  <%= @allorder.DELIVERY_TIME %>
+</p>
+
+<p>
+  <strong>Order state:</strong>
+  <%= @allorder.ORDER_STATE %>
+</p>
+
+<p>
+  <strong>Upload video:</strong>
+  <%= @allorder.UPLOAD_VIDEO %>
+</p>
+
+<p>
+  <strong>Performer total:</strong>
+  <%= @allorder.Performer_TOTAL %>
+</p>
+
+<p>
+  <strong>C4u commission:</strong>
+  <%= @allorder.C4U_commission %>
+</p>
+
+<p>
+  <strong>Gross total:</strong>
+  <%= @allorder.Gross_Total %>
+</p>
+
+<%= link_to 'Edit', edit_allorder_path(@allorder) %> |
+<%= link_to 'Back', allorders_path %>
