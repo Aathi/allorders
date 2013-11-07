@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @register.username %>
+</p>
+
+<p>
+  <strong>Encrypted password:</strong>
+  <%= @register.encrypted_password %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @register.email_id %>
+</p>
+
+<%= link_to 'Edit', edit_register_path(@register) %> |
+<%= link_to 'Back', registers_path %>

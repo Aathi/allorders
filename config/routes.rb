@@ -1,7 +1,12 @@
 Newallorders::Application.routes.draw do
-  resources :updateallorders
+  resources :registers
 
-  resources :signups
+  get "users/welcome"
+  get "users/login"
+  post"users/login"
+  get "users/new"
+
+  resources :updateallorders
 
   resources :allorders
 

@@ -1,0 +1,19 @@
+<h1>Users login Page</h1>
+<span style=" text-decoration-color:red;">
+<% if @fehler1 %>
+    user exist!
+      <% elsif @fehler2 %>
+     Wrong password!
+
+      <% end %>
+      <br/></br> </span>
+
+<p>Find me in app/views/users/login.html.erb</p>
+
+<form action="/users/login"  method="post">
+  <table width="30%">
+  <tr><td>user Name:</td><td><input type="text" name="username"></td></tr>
+  <tr><td>Password:</td><td><input type="text" name="password"></td></tr>
+  <tr><td><td><input type="submit" value="login"/></td></tr>
+</table>
+</form>

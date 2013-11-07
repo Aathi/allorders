@@ -2,10 +2,12 @@
 
 one:
   name: MyString
-  email_id: MyString
-  password: MyString
+  email: MyString
+  encrypted_password: MyString
+  salt: MyString
 
 two:
   name: MyString
-  email_id: MyString
-  password: MyString
+  email: MyString
+  encrypted_password: MyString
+  salt: MyString

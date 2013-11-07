@@ -11,9 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131106182837) do
+ActiveRecord::Schema.define(version: 20131107013450) do
 
-  create_table "allorders", id: false, force: true do |t|
+  create_table "allorders", force: true do |t|
     t.string   "CREATED_DATE"
     t.string   "PERFORMER"
     t.string   "CATEGORY"
@@ -28,6 +28,17 @@ ActiveRecord::Schema.define(version: 20131106182837) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "ORDER_ID"
+  end
+
+# Could not dump table "allorders " because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
+
+  create_table "registers", force: true do |t|
+    t.string   "username"
+    t.string   "encrypted_password"
+    t.string   "email_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "signups", primary_key: "user_id", force: true do |t|
@@ -50,6 +61,15 @@ ActiveRecord::Schema.define(version: 20131106182837) do
     t.string   "Performer_TOTAL"
     t.string   "C4U_commission"
     t.string   "Gross_Total"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "encrypted_password"
+    t.string   "salt"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

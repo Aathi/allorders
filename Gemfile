@@ -31,6 +31,14 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+gem 'simple_form'
+gem 'rails-footnotes', '>= 3.7.9', :group => :development
+gem 'bootstrap-sass', '~> 3.0.1.0.rc'
+gem "twitter-bootstrap-rails"
+
+gem "therubyracer"
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
